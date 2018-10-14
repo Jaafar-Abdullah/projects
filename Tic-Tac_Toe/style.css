@@ -1,0 +1,47 @@
+header
+{
+    background-color: aqua;
+    height: 50px;
+    width: auto;
+    margin: 10px auto;
+    text-align: center;
+    
+
+}
+.flex-container
+{
+   
+    width: 650px;
+    height: 630px;
+    margin: auto;
+    background-color: lightsteelblue;
+    
+}
+.clear
+{
+    display: flex;
+    justify-content:center;
+}
+.box
+{
+    
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    margin: 4px;
+    
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-color:2px solid black;
+    border-radius: 50%
+    
+  }
+
+  .styleFont{
+        font-size: 60px;
+        text-align: center;
+  }
+
