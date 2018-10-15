@@ -1,47 +1,97 @@
-header
-{
-    background-color: aqua;
-    height: 50px;
-    width: auto;
-    margin: 10px auto;
-    text-align: center;
-    
-
-}
-.flex-container
-{
-   
-    width: 650px;
-    height: 630px;
-    margin: auto;
-    background-color: lightsteelblue;
-    
-}
-.clear
-{
-    display: flex;
-    justify-content:center;
-}
-.box
-{
-    
-    background-color: white;
-    width: 200px;
-    height: 200px;
-    margin: 4px;
-    
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
 
-.circle {
-    width: 40px;
-    height: 40px;
-    border-color:2px solid black;
-    border-radius: 50%
-    
-  }
+header {
+  background-color: rgb(86, 80, 75);
+  height: 50px;
+  width: auto;
+  margin: 10px auto;
+  text-align: center;
+  color: white;
+}
+aside {
+  width: 100px;
+  height: auto;
+  background-color: white;
+}
+body {
+  background-color: rgb(86, 80, 75);
+}
+.input {
+  display: block;
+  color: white;
+}
+.results {
+  position: relative;
+  top: 30px;
+  width: 200px;
+}
+.score {
+  position: relative;
+  top: 30px;
+  width: 200px;
+}
+.flex-container {
+  width: 650px;
+  height: 630px;
+  margin: 30px;
+  background-color: rgb(86, 80, 75);
+}
+.container {
+  width: 318px;
+  height: 250px;
+  margin: auto;
+  background-color: rgb(86, 80, 75);
+  text-align: center;
+  padding: 180px;
+}
+.clear {
+  display: flex;
+  justify-content: celnter;
+}
 
-  .styleFont{
-        font-size: 60px;
-        text-align: center;
-  }
+.box {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  margin: 4px;
 
+  text-align: center;
+}
+
+.box:hover {
+  /* background-image: url("./image/X.png");
+    background-size: 100%; */
+  background-color: ivory;
+}
+
+.styleFontO {
+  font-size: 100px;
+  text-align: center;
+  color: rgb(0, 177, 230);
+}
+.styleFontX {
+  font-size: 100px;
+  text-align: center;
+  color: rgb(294, 225, 90);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: rgb(86, 80, 75);
+  padding: 5px;
+}
+.grid-item {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+img {
+  height: 300px;
+  width: 300px;
+}
