@@ -14,8 +14,10 @@ $(document).ready(function() {
   ];
   var count = 0;
   var s = 0;
-  var num = 2;
-
+  var num = 1;
+  if (num === 1) {
+    randomMethod();
+  }
   $(".box").on("click", function(e) {
     // debugger;
     var text = $(this).text();
@@ -28,6 +30,10 @@ $(document).ready(function() {
         var id = $(this).attr("id");
         Oarr.push(id);
         checkResult(Oarr, result, "O");
+        if (num === 1) {
+          randomMethod();
+          count++;
+        }
       } else {
         $(this)
           .text("X")
@@ -36,25 +42,40 @@ $(document).ready(function() {
         var id = $(this).attr("id");
         Xarr.push(id);
         checkResult(Xarr, result, "X");
+        // }
       }
     } else {
-      alert("you can not play here");
+      swal("you can not play here");
     }
   });
-
+  function randomMethod() {
+    var randomNum = parseInt(Math.random() * 9);
+    var $ran = $(".box").eq(randomNum);
+    var text = $ran.text();
+    if (text === "") {
+      console.log(text);
+      $ran.addClass("styleFontX").text("X");
+      Xarr.push(randomNum + "");
+      checkResult(Xarr, result, "X");
+      return;
+    } else {
+      console.log(text);
+      randomNum = parseInt(Math.random() * 9);
+      randomMethod();
+    }
+  }
   function checkResult(XOarr, result, XorO) {
     if (XOarr.length >= 3) {
       for (var i = 0; i < result.length; i++) {
         if (isMatch(result[i], XOarr)) {
           window.setTimeout(function() {
-            alert(XorO + " has win");
+            swal(XorO + " has win");
           }, 100);
           create(Xarr, Oarr, XorO);
           reSet(XorO);
-          // debugger;
-          //   break;
         } else if (Oarr.length === 5 && Xarr.length === 4) {
-          alert("Draw");
+          create(Xarr, Oarr);
+          swal("Draw");
           reSet();
         }
       }
@@ -76,11 +97,7 @@ $(document).ready(function() {
 
   function isMatch(result, XOarr) {
     s = 0;
-
-    // console.log(result);
-
     for (var j = 0; j < XOarr.length; j++) {
-      // debugger;
       if (result.includes(XOarr[j])) {
         s++;
       }
@@ -91,15 +108,11 @@ $(document).ready(function() {
     }
   }
 
-  function create(Xarr, Oarr, XorO) {
+  function create(Xarr, Oarr) {
     console.log(Oarr);
 
     var $re = $(".results");
-    var $div = $("<div/>").addClass("grid-container");
-    var $winner = $("<div/>")
-      .addClass("winner")
-      .text(XorO + " has win");
-    $re.append($($winner));
+    var $div = $("<div/>").addClass("grid-container animated flash");
     for (var i = 0; i < 9; i++) {
       var $s = $("<div/>")
         .attr("id", i)
@@ -114,6 +127,6 @@ $(document).ready(function() {
     $re.append($div);
   }
 });
-function change_page() {
-  window.location.href = "index.html";
-}
+// function change_page() {
+//   window.location.href = "index.html";
+// }
