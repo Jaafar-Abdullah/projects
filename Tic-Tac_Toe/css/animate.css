@@ -664,6 +664,8 @@
   animation-name: jello;
   -webkit-transform-origin: center;
   transform-origin: center;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes heartBeat {
