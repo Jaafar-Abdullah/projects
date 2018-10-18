@@ -27,6 +27,7 @@ I will try to make it more intelligent and use one of the AI algorithm.
 - jQuery: http://jquery.com/
 - animate css: https://daneden.github.io/animate.css/
 - sweetalert: https://sweetalert.js.org/guides/
+- Thanks for: Jack Jeffress, Trevor Preston, Moath Althawad, Mohammed, Ali, Faisal, Sultan alsamaani, Abdullah.
 
 **### I'm very proud of what I did in this game and I will improve it in the futur**
 
